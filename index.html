@@ -1,0 +1,16 @@
+<h1>Mini Google</h1>
+<form method="POST">
+  <input name="word" placeholder="Koun khojiba?">
+  <button>Search</button>
+  <br><br>
+  <input name="link" placeholder="Bada link deya">
+  <button>Short Kara</button>
+</form>
+
+{% for r in results %}
+  <p>{{ r['title'] }}</p>
+{% endfor %}
+
+{% if short %}
+  <h3>Short Link: {{ short }}</h3>
+{% endif %}
